@@ -12,7 +12,7 @@ HTMLDIR = os.path.abspath(
 def makeApp():
     endpoints=[
         ("/",Index.Handler),
-        ("/profile/.*",Profile.Handler)
+        ("/profile/.*",Profile.ProfileHandler)
     ]
     app = tornado.web.Application(endpoints,
         static_path=HTMLDIR
