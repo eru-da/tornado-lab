@@ -9,23 +9,27 @@ class ProfileHandler(tornado.web.RequestHandler):
         D = {
             "alice" : {
                 "name" : "Alice Smith",
-                "DOB" : "Jan 1",
-                "email" : "alice@example.com"
+                "DOB" : "January 1",
+                "email" : "alice@example.com",
+                "image" : "/static/alice.png"
             },
             "bob" : {
                 "name" : "Bob Jones",
-                "DOB" : "Dec 31",
-                "email" : "bob@bob.xyz"
+                "DOB" : "December 31",
+                "email" : "bob@bob.xyz",
+                "image" : "/static/bob.png"
             },
             "carol" : {
                 "name" : "Carol Ling",
-                "DOB" : "Jul 17",
-                "email" : "carol@example.com"
+                "DOB" : "July 17",
+                "email" : "carol@example.com",
+                "image" : "/static/carol.png"
             },
             "dave" : {
                 "name" : "Dave N. Port",
-                "DOB" : "Mar 14",
-                "email" : "dave@dave.dave"
+                "DOB" : "March 14",
+                "email" : "dave@dave.dave",
+                "image" : "/static/dave.png"
             }
         }
 
@@ -35,6 +39,7 @@ class ProfileHandler(tornado.web.RequestHandler):
             "../html/Profiles.html",
             name=info["name"],
             dob=info["DOB"],
-            email=info["email"]
+            email=info["email"],
+            image=info["image"]
         )
         

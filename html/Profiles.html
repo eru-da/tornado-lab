@@ -1,11 +1,58 @@
 <!DOCTYPE html>
 <html>
+<style>
+    body {
+        background: lightslategrey;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: rgb(55, 66, 74);
+        text-align: center;
+    }
+
+    img {
+        display: inline-block;
+        border-style: solid;
+        border-width: 10px;
+        width: 256px;
+        height: 256px;
+    }
+    table {
+        border-style: solid;
+        background: rgb(55, 66, 74);
+        color: lightslategray;
+        text-align: left;
+        display: inline-block;
+        
+    }
+    table td {
+        border-color: lightslategray;
+    }
+    table td:first-child {
+        font-weight: bold;
+        padding-right: 10px;
+    }
+</style>
 <head>
     <title>{{name}}'s Profile</title>
 </head>
 <body>
-Name: {{name}}<br>
-Date of Birth: {{dob}}<br>
-E-mail Address:{{email}}<br>
+    <div>
+        <img src={{image}}>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <td>Name: </td>
+                <td>{{name}}</td>
+            </tr>
+            <tr>
+                <td>Date of Birth: </td>
+                <td>{{dob}}</td>
+            </tr>
+            <tr>
+                <td>E-mail Address: </td>
+                <td>{{email}}</td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
