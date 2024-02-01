@@ -7,7 +7,7 @@ function update() {
     } else {
         let R = new FileReader();
         R.addEventListener("load", () => {
-            image = btoa(R.result);    //do base64 encoding 
+            let image = btoa(R.result);    //do base64 encoding 
             sendToServer(image);
         });
         R.readAsBinaryString(file);
