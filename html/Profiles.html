@@ -36,23 +36,39 @@
 </head>
 <body>
     <div>
-        <img src={{image}}>
+        <img src="{{image}}">
+    </div>
+    <div>
+        <table><tr>
+            <td>
+                <label class="filepicker" for="image">Upload File…</label>
+                <input style="display:none;" id="image" value="{{image}}" type="file">
+            </td>
+        </tr></table>
     </div>
     <div>
         <table>
             <tr>
                 <td>Name: </td>
-                <td>{{name}}</td>
+                <td><input id="name" value="{{name}}"></td>
             </tr>
             <tr>
                 <td>Date of Birth: </td>
-                <td>{{dob}}</td>
+                <td><input id="dob" type="date" value="{{dob}}"></td>
             </tr>
             <tr>
                 <td>E-mail Address: </td>
-                <td>{{email}}</td>
+                <td><input id="email" type="email" value="{{email}}"></td>
+            </tr>
+            <tr>
+                <td><button onclick="update()">Update</button></td>
             </tr>
         </table>
     </div>
+    <script>
+        let uname = "{{uname}}"
+        let pfp = "{{image}}"
+    </script>
+    <script src="/static/Update.js"></script>
 </body>
-</html>
+</html> 
